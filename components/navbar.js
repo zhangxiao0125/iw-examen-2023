@@ -24,7 +24,7 @@ const NavbarItem = () => {
 					<Navbar.Link href="/housings" active={path == '/housings'}>Alojamientos</Navbar.Link>
 					<Navbar.Link href="/users" active={path == '/users'}>Usuarios</Navbar.Link>
 					<Navbar.Link href="/bookings" active={path == '/bookings'}>Reservas</Navbar.Link>
-					<Navbar.Link href="/mi-perfil" active={path == '/mi-perfil'} className="underline">Mi Perfil</Navbar.Link>
+					{/* <Navbar.Link href="/mi-perfil" active={path == '/mi-perfil'} className="underline">Mi Perfil</Navbar.Link> */}
 				</Navbar.Collapse>
 			</div>)}
 

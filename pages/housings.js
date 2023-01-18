@@ -17,7 +17,7 @@ const Housings = ({
 	const handleSubmit = async event => {
 		event.preventDefault()
 		if(event.target.nombre.value !== "") {
-			router.push(`/housings?owner=${event.target.nombre.value}`)
+			router.push(`/housings?nombre=${event.target.nombre.value}`)
 		}  else if(event.target.address.value !== "") {
 			router.push(`/housings?address=${event.target.address.value}`)
 		} else {
@@ -30,15 +30,9 @@ const Housings = ({
 		document.getElementById("address").value = ""
 		document.getElementById("address").style.display = "none"
 
-		setPrice1("")
-		setPrice2("")
-		document.getElementById("price1").value = ""
-		document.getElementById("price2").value = ""
-		document.getElementById("prices").style.display = "none"
-
-		setOwner("")
-		document.getElementById("owner").value = ""
-		document.getElementById("owner").style.display = "none"
+		setNombre("")
+		document.getElementById("nombre").value = ""
+		document.getElementById("nombre").style.display = "none"
 
 		document.getElementById("submit").style.display = "none"
 		document.getElementById("submit").click();
@@ -49,15 +43,10 @@ const Housings = ({
 		document.getElementById("address").value = ""
 		document.getElementById("address").style.display = "block"
 
-		setPrice1("")
-		setPrice2("")
-		document.getElementById("price1").value = ""
-		document.getElementById("price2").value = ""
-		document.getElementById("prices").style.display = "none"
 
-		setOwner("")
-		document.getElementById("owner").value = ""
-		document.getElementById("owner").style.display = "none"
+		setNombre("")
+		document.getElementById("nombre").value = ""
+		document.getElementById("nombre").style.display = "none"
 
 		document.getElementById("submit").style.display = "block"
 		document.getElementById("submit").click();
@@ -168,10 +157,10 @@ const Housings = ({
 }
 
 export async function getServerSideProps(ctx){
-	if((ctx.query).owner !== undefined) {
-		const {owner} = ctx.query 
+	if((ctx.query).nombre !== undefined) {
+		const {nombre} = ctx.query 
 
-		const housings = await fetch(`http://${process.env.URL}/api/housings/owner/${owner}`)
+		const housings = await fetch(`http://${process.env.URL}/api/housings/nombre/${nombre}`)
 		.then(response => response.json())
 
 		return {
