@@ -81,7 +81,7 @@ const EditBooking = ({
 					</div>
 					<div className="pb-2">
 						<div>
-							<label className="text-gray-800"htmlFor="housing"> Identificador de alojamiento </label>
+							<label className="text-gray-800"htmlFor="housing"> Identificador de aparcamiento </label>
 						</div>
 						<TextInput id="housing" 
 							name="housing" 

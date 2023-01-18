@@ -1736,10 +1736,10 @@
     "cloudinary-core" "^2.13.0"
     "prop-types" "^15.8.1"
 
-"cloudinary@^1.33.0":
-  "integrity" "sha512-pdqOgd2QAMCFWujdYw1yhZ+lHPTzc6YIfg4WIvbRyoojIbSd/YgnHT8OSnk/OM4Q1WPFD5FM9EEom+4ehG80IA=="
-  "resolved" "https://registry.npmjs.org/cloudinary/-/cloudinary-1.33.0.tgz"
-  "version" "1.33.0"
+"cloudinary@^1.32.0":
+  "integrity" "sha512-hbc5/ilOkwD49+Lucqze3z+2Tejc3YdH4tkI+y1Ciabi9Qh9MYcy4M3rYeDAYiMS/jIz5FfHOzx+JjVnPJxNAQ=="
+  "resolved" "https://registry.npmjs.org/cloudinary/-/cloudinary-1.32.0.tgz"
+  "version" "1.32.0"
   dependencies:
     "cloudinary-core" "^2.10.2"
     "core-js" "^3.6.5"

@@ -1,0 +1,14 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/aparcamientos": "pages/aparcamientos.js",
+  "/": "pages/index.js",
+  "/users": "pages/users.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/users/email/[email]": "pages/api/users/email/[email].js",
+  "/api/users": "pages/api/users.js",
+  "/api/aparcamientos": "pages/api/aparcamientos.js",
+  "/user": "pages/user.js",
+  "/api/users/[id]": "pages/api/users/[id].js"
+}

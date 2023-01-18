@@ -66,9 +66,9 @@ const CreateBooking = ({loggedUser}) => {
 							</div>,
 							<div className="pb-4">
 								<div>
-									<label className="text-gray-800"htmlFor="housing"> Identificador de alojamiento </label>
+									<label className="text-gray-800"htmlFor="housing"> Identificador de aparcamiento </label>
 								</div>
-								<TextInput required={true} id="housing" name="_housing" placeholder="Identificador de alojamiento" ref={housing}/>
+								<TextInput required={true} id="housing" name="_housing" placeholder="Identificador de aparcamiento" ref={housing}/>
 							</div>
 						]) : ([
 							<div className="pb-2">
@@ -79,9 +79,9 @@ const CreateBooking = ({loggedUser}) => {
 							</div>,
 							<div className="pb-2">
 								<div>
-									<label className="text-gray-800"htmlFor="housing"> Identificador de alojamiento </label>
+									<label className="text-gray-800"htmlFor="housing"> Identificador de aparcamiento </label>
 								</div>
-								<TextInput required={true} id="housing" name="_housing" placeholder="Identificador de alojamiento" ref={housing}/>
+								<TextInput required={true} id="housing" name="_housing" placeholder="Identificador de aparcamiento" ref={housing}/>
 							</div>,
 							<div className="pb-2">
 								<div>

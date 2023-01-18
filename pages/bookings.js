@@ -198,7 +198,7 @@ const Bookings = ({bookings}) => {
 													<div className="min-w-0 flex-1">
 														<p className="truncate font-medium text-gray-900 dark:text-white">{(booking.startDate).split('T')[0] + " → " + (booking.endDate).split('T')[0]} </p>
 														<p className="truncate text-gray-500 dark:text-gray-400"><span className="font-medium">Usuario: </span>{(booking.user).name + " " + (booking.user).surname}</p>
-														<p className="truncate text-gray-500 dark:text-gray-400"><span className="font-medium">Alojamiento: </span>{(booking.housing).address}</p>
+														<p className="truncate text-gray-500 dark:text-gray-400"><span className="font-medium">aparcamiento: </span>{(booking.housing).address}</p>
 													</div>
 													<Button className="bg-blue-600 hover:bg-blue-800">
 														<Link href={`booking/?id=${booking._id}`} passHref>Ver reserva</Link>
@@ -226,7 +226,7 @@ const Bookings = ({bookings}) => {
 													</div>
 													
 													<p className="truncate text-gray-700 dark:text-gray-400"><span className="font-medium">Usuario: </span>{(booking.user).name + " " + (booking.user).surname}</p>
-													<p className="truncate text-gray-700 dark:text-gray-400"><span className="font-medium">Alojamiento: </span>{(booking.housing).address}</p>
+													<p className="truncate text-gray-700 dark:text-gray-400"><span className="font-medium">aparcamiento: </span>{(booking.housing).address}</p>
 												</div>
 	
 												<Button className="bg-blue-600 hover:bg-blue-800">
