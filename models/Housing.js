@@ -1,37 +1,37 @@
 import {Schema, model, models} from 'mongoose'
 
-const housingSchema = new Schema({
-	title:{
+const parkingSchema = new Schema({
+	poiID: {
+		type: String
+	},
+	nombre:{
 		type:String,
-		required: [true, 'Title is required'],
+		required: [true, 'Nombre is required'],
 		trim: true
 	},
-	description: {
+	direccion: {
 		type : String,
-		required: [true, 'Description is required'],
+		required: [true, 'Direccion is required'],
 	},
-	address: {
-		type: String,
-		required : [true, 'Address is required']
-	},
-	price: {
+	latitud: {
 		type: Number,
-		required : [true, 'Price is required']
+		required : [true, 'Latitud is required']
 	},
-	owner: {
-		type: Schema.Types.ObjectId, ref: 'User',
-		required : [true, 'Owner is required']
-	},
-	lat: {
+	longitud: {
 		type: Number,
-		required : [true, 'Latitude is required']
+		required : [true, 'Longitud is required']
 	},
-	lng: {
+	capacidad: {
 		type: Number,
-		required : [true, 'Longitude is required']
+		required : [true, 'Capacidad is required']
 	},
-	public_id: {
-		type: String
+	libres: {
+		type: Number,
+		required : [true, 'Libres is required']
+	},
+	correo: {
+		type: Number,
+		required : [true, 'Correo is required']
 	}
 }, {
 	timestamps: false,

@@ -11,24 +11,24 @@ const Housings = ({
 }) => {
 
 	const router = useRouter()
-	const [addressValue, setAddress] = useState(housings.address)
+	const [plazasValue, setPlazas] = useState(housings.plazas)
 	const [nombreValue, setNombre] = useState(housings.nombre)
 
 	const handleSubmit = async event => {
 		event.preventDefault()
 		if(event.target.nombre.value !== "") {
 			router.push(`/housings?nombre=${event.target.nombre.value}`)
-		}  else if(event.target.address.value !== "") {
-			router.push(`/housings?address=${event.target.address.value}`)
+		}  else if(event.target.plazas.value !== "") {
+			router.push(`/housings?plazas=${event.target.plazas.value}`)
 		} else {
 			router.push(`/housings`)
 		}
 	}
 
 	function filterNone() {
-		setAddress("")
-		document.getElementById("address").value = ""
-		document.getElementById("address").style.display = "none"
+		setPlazas("")
+		document.getElementById("plazas").value = ""
+		document.getElementById("plazas").style.display = "none"
 
 		setNombre("")
 		document.getElementById("nombre").value = ""
@@ -38,10 +38,10 @@ const Housings = ({
 		document.getElementById("submit").click();
 	}
 
-	function filterAddress() {
-		setAddress("")
-		document.getElementById("address").value = ""
-		document.getElementById("address").style.display = "block"
+	function filterPlazas() {
+		setPlazas("")
+		document.getElementById("plazas").value = ""
+		document.getElementById("plazas").style.display = "block"
 
 
 		setNombre("")
@@ -53,9 +53,9 @@ const Housings = ({
 	}
 
 	function filterNombre() {
-		setAddress("")
-		document.getElementById("address").value = ""
-		document.getElementById("address").style.display = "none"
+		setPlazas("")
+		document.getElementById("plazas").value = ""
+		document.getElementById("plazas").style.display = "none"
 
 		setNombre("")
 		document.getElementById("nombre").value = ""
@@ -79,19 +79,19 @@ const Housings = ({
 							<Dropdown.Item onClick={filterNone}>
 								Ninguno
 							</Dropdown.Item>
-							<Dropdown.Item onClick={filterAddress}>
-								Dirección
+							<Dropdown.Item onClick={filterPlazas}>
+								Plazas Libres
 							</Dropdown.Item>
 							<Dropdown.Item onClick={filterNombre}>
 								Nombre
 							</Dropdown.Item>
 						</Dropdown>
 
-							<TextInput id="address" 
-								name="address" 
+							<TextInput id="plazas" 
+								name="plazas" 
 								className="pt-4 w-96"
-								value={addressValue}
-								placeholder="Dirección"
+								value={plazasValue}
+								placeholder="al menos un 25% de plazas libres"
 								onChange={ (event) => setAddress(event.target.value)}
 								style={{display: "none"}}
 							/>

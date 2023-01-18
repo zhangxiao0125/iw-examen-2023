@@ -51,97 +51,10 @@ const Users = ({users, loggedUser}) => {
 	}
 	
 
-	function filterNone() {
-		setUsername("")
-		document.getElementById("username").value = ""
-		document.getElementById("username").style.display = "none"
-
-		setAge1("")
-		setAge2("")
-		document.getElementById("age1").value = ""
-		document.getElementById("age2").value = ""
-		document.getElementById("ages").style.display = "none"
-
-		document.getElementById("submit").style.display = "none"
-		document.getElementById("submit").click();
-	}
-
-	function filterUsername() {
-		setUsername("")
-		document.getElementById("username").value = ""
-		document.getElementById("username").style.display = "block"
-
-		setAge1("")
-		setAge2("")
-		document.getElementById("age1").value = ""
-		document.getElementById("age2").value = ""
-		document.getElementById("ages").style.display = "none"
-
-		document.getElementById("submit").style.display = "block"
-		document.getElementById("submit").click();
-	}
-
-	function filterAges() {
-		setUsername("")
-		document.getElementById("username").value = ""
-		document.getElementById("username").style.display = "none"
-
-		setAge1("")
-		setAge2("")
-		document.getElementById("age1").value = ""
-		document.getElementById("age2").value = ""
-		document.getElementById("ages").style.display = "block"
-
-		document.getElementById("submit").style.display = "block"
-		document.getElementById("submit").click();
-	}
-
 	return (
 		<>
 			<NavbarItem />	
 			<div className="flex flex-col pt-10 items-center">
-				<Dropdown label="Filtro" inline={true}>
-					<Dropdown.Item onClick={filterNone}>
-						Ninguno
-					</Dropdown.Item>
-					<Dropdown.Item onClick={filterUsername}>
-						Apodo
-					</Dropdown.Item>
-					<Dropdown.Item onClick={filterAges}>
-						Edades
-					</Dropdown.Item>
-				</Dropdown>
-
-				<form onSubmit={handleSubmit}>
-					<TextInput id="username" 
-						name="username" 
-						value={usernameValue}
-						placeholder="Nombre de usuario"
-						className="pt-4 w-96"
-						onChange={(event) => setUsername(event.target.value)}
-						style={{display: "none"}}/>
-
-					<div id="ages" className="w-96" style={{display: "none"}}>
-						<TextInput id="age1" 
-							name="age1" 
-							value={age1Value}
-							placeholder="Edad mínima"
-							onChange={(event) => setAge1(event.target.value)}/>
-
-						<TextInput id="age2"
-							name="age2" 
-							value={age2Value}
-							className="pt-4"
-							placeholder="Edad máxima"
-							onChange={(event) => setAge2(event.target.value)}/>
-					</div>
-
-					<div className="flex-col flex items-center">
-						<Button id="submit" type="submit" className="my-4 bg-blue-600 hover:bg-blue-800" style={{display: "none"}}>
-							Buscar
-						</Button>
-					</div>
-				</form>
 
 				<Card>
 					<div className="flex items-center justify-center">
